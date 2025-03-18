@@ -3,7 +3,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import homeImg from '../../../assets/landingpageOne.jpg'
 import Navbar from "../../common/nav";
 import MyConstomer from "../constS/consomersat";
-
+import WhatIDo from "../../Home/what_i_do/what_i_do";
+import  CustomerInteractionContainer from "../Outbonding_constomer/Outbonding";
+import TestimonialSlider from "../feedback/feedback";
+import Footer from '../../common/footer';
 const EnhancedLanding = () => {
   // Dynamic text rotation
   const roles = ["Paras", "An LGBTQI+ Expert", "A Consultant", "A Mentor"];
@@ -231,7 +234,11 @@ const EnhancedLanding = () => {
       
       {/* Stats Section */}
       <MyConstomer/>
-     
+
+      <WhatIDo/>
+      <CustomerInteractionContainer/>
+     <TestimonialSlider/>
+     <Footer/>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import LogoImg from '../../assets/nav_logo.jpeg'
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -46,7 +47,7 @@ const Navbar = () => {
               whileHover={{ scale: 1.1, rotate: 5 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="font-bold text-lg">P</span>
+              <img  src={LogoImg}className="w-full h-full rounded-full"/>
             </motion.div>
             <span className="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-purple-500">
               PARAS
