@@ -1,8 +1,9 @@
 import React from "react";
 import { Book, Lightbulb, Globe, HandHelping } from 'lucide-react';
-import imagefist from "../../../assets/aboutimg2.jpeg";
-import imagesecond from "../../../assets/Aboutimg3.jpeg";
- import three from "../../../assets/Aboutimg1.jpeg";
+import imagefist from '../../../assets/aboutimg2.jpeg';
+import imagesecond from '../../../assets/aboutimg3.jpeg';
+
+ import three from '../../../assets/AboutImg1.jpeg';
  import Navbar from "../../common/nav";
 // import imagefist from "../assets/first.jpg";
 // import imagefist from "../assets/first.jpg";
@@ -11,7 +12,9 @@ import imagesecond from "../../../assets/Aboutimg3.jpeg";
 const MainAbout = () => {
   return (
     <div className="font-['Poppins'] text-[#333] leading-[1.6]">
+        <div className="bg-white">
         <Navbar />
+        </div>
       {/* Hero Section */}
       <section className="relative bg-[#5c6bc0] text-white py-[120px] text-center overflow-hidden">
         {/* Background overlay */}
