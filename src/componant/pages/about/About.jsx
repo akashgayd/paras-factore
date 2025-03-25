@@ -6,6 +6,7 @@ import imagesecond from "../../../assets/Aboutimg3.jpeg";
  import Navbar from "../../common/nav";
 // import imagefist from "../assets/first.jpg";
 // import imagefist from "../assets/first.jpg";
+// hfdjhfjdhgj
 
 const MainAbout = () => {
   return (
