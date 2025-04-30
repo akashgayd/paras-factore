@@ -25,13 +25,13 @@ const Navbar = () => {
     { to: '/about', label: 'About' },
     { to: '/services', label: 'Services' },
    
-    { to: '/testimonials', label: 'Testimonials' },
+    
     { to: '/contact', label: 'Contact' }
   ];
 
   return (
     <motion.nav 
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 ${
         isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'
       }`}
       initial={{ y: -100 }}
@@ -87,6 +87,25 @@ const Navbar = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
+            <Link to="/contact">
+              <motion.button
+                className="bg-gradient-to-r from-pink-500 to-red-500 text-white px-6 py-2 rounded-full font-medium shadow-md"
+                whileHover={{ scale: 1.05, boxShadow: "0px 5px 15px rgba(255, 56, 92, 0.4)" }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Get Started
+              </motion.button>
+            </Link>
+          </motion.div>
+
+          {/* Mobile CTA Button */}
+          <motion.div
+            className="md:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+          >
+            <Link to="/contact">
             <motion.button
               className="bg-gradient-to-r from-pink-500 to-red-500 text-white px-6 py-2 rounded-full font-medium shadow-md"
               whileHover={{ scale: 1.05, boxShadow: "0px 5px 15px rgba(255, 56, 92, 0.4)" }}
@@ -94,6 +113,7 @@ const Navbar = () => {
             >
               Get Started
             </motion.button>
+            </Link>
           </motion.div>
 
           {/* Mobile Menu Button */}
@@ -142,6 +162,7 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
+            <Link to="/contact">
             <motion.button
               className="bg-gradient-to-r from-pink-500 to-red-500 text-white py-2 rounded-md font-medium shadow-md mt-2"
               whileHover={{ scale: 1.02 }}
@@ -149,6 +170,7 @@ const Navbar = () => {
             >
               Get Started
             </motion.button>
+            </Link>
           </div>
         </div>
       </motion.div>

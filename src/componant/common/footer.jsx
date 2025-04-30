@@ -1,126 +1,135 @@
 import React, { useState, useEffect } from 'react';
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaArrowUp } from 'react-icons/fa';
-import ComLogo from '../../assets/nav_logo.jpeg'
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaArrowUp, FaInstagram } from 'react-icons/fa';
+import ComLogo from '../../assets/nav_logo.jpeg';
 
 const Footer = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setShowScrollTop(true);
-      } else {
-        setShowScrollTop(false);
-      }
+      setShowScrollTop(window.scrollY > 300);
     };
 
     window.addEventListener('scroll', handleScroll);
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
     <>
-      <footer className="w-full bg-gradient-to-r from-gray-50 to-gray-100 py-10 px-5">
-        <div className="max-w-6xl mx-auto">
-          {/* Brand Section */}
-          <div className="flex items-center mb-8 w-full flex-col sm:flex-row">
-            <div className="w-[70px] h-[70px] rounded-full overflow-hidden mb-4 sm:mb-0 sm:mr-4">
-              <img 
-                src={ComLogo} 
-                alt="Company Logo" 
-                className="w-full h-full object-cover"
-              />
+      <footer className="w-full bg-gray-900 text-gray-300 py-12 px-4 border-t border-gray-800">
+        <div className="max-w-7xl mx-auto">
+          {/* Top Section */}
+          <div className="flex flex-col md:flex-row justify-between items-start mb-12">
+            {/* Brand Info */}
+            <div className="flex flex-col items-start mb-8 md:mb-0 w-full md:w-auto">
+              <div className="flex items-center mb-4">
+                <div className="w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-white">
+                  <img 
+                    src={ComLogo} 
+                    alt="Company Logo" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="text-2xl text-white font-bold">Paras Factore</div>
+              </div>
+              <p className="text-gray-400 max-w-xs mb-4">
+                Transforming ideas into digital reality with innovative solutions.
+              </p>
+              <div className="flex gap-4">
+                {[FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram].map((Icon, index) => (
+                  <a 
+                    key={index}
+                    href="#" 
+                    className="w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-full flex items-center justify-center transition-colors duration-300 group"
+                  >
+                    <Icon className="text-gray-300 group-hover:text-white text-lg" />
+                  </a>
+                ))}
+              </div>
             </div>
-            <div className="text-2xl text-gray-500 font-semibold">Paras factore</div>
+
+            {/* Links Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 w-full md:w-auto">
+              {/* Quick Links */}
+              <div>
+                <h3 className="text-white text-lg font-semibold mb-5 uppercase tracking-wider">Quick Links</h3>
+                <ul className="space-y-3">
+                  {['About', 'Portfolio', 'Services', 'Blog', 'Contact'].map((item) => (
+                    <li key={item}>
+                      <a 
+                        href="#" 
+                        className="text-gray-400 hover:text-white transition-colors duration-300"
+                      >
+                        {item}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Resources */}
+              <div>
+                <h3 className="text-white text-lg font-semibold mb-5 uppercase tracking-wider">Resources</h3>
+                <ul className="space-y-3">
+                  {['Help Center', 'System Status', 'Terms', 'Pricing', 'Over Right'].map((item) => (
+                    <li key={item}>
+                      <a 
+                        href="#" 
+                        className="text-gray-400 hover:text-white transition-colors duration-300"
+                      >
+                        {item}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Company */}
+              <div>
+                <h3 className="text-white text-lg font-semibold mb-5 uppercase tracking-wider">Company</h3>
+                <ul className="space-y-3">
+                  {['Careers', 'Privacy', 'Cookies', 'Press', 'FAQ'].map((item) => (
+                    <li key={item}>
+                      <a 
+                        href="#" 
+                        className="text-gray-400 hover:text-white transition-colors duration-300"
+                      >
+                        {item}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
- 
-          {/* Columns Container */}
-          <div className="flex flex-wrap -mx-4">
-            {/* Quick Link Column */}
-            <div className="w-full md:w-1/3 px-4 mb-8">
-              <h3 className="text-pink-500 text-lg font-semibold uppercase mb-5">Quick Link</h3>
-              <ul>
-                {['About', 'Portfolio', 'Services', 'Blog', 'Contact'].map((item) => (
-                  <li key={item} className="mb-3">
-                    <a 
-                      href="www.linkedin.com/in/akash-gaydhane-34b0601b1" 
-                      className="text-gray-700 hover:text-pink-500 transition-colors duration-300"
-                    >
-                      {item}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
 
-            {/* Resources Column */}
-            <div className="w-full md:w-1/3 px-4 mb-8">
-              <h3 className="text-pink-500 text-lg font-semibold uppercase mb-5">Resources</h3>
-              <ul>
-                {['Authentication', 'System Status', 'Terms of Service', 'Pricing', 'Over Right'].map((item) => (
-                  <li key={item} className="mb-3">
-                    <a 
-                      href="#" 
-                      className="text-gray-700 hover:text-pink-500 transition-colors duration-300"
-                    >
-                      {item}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+          {/* Bottom Section */}
+          <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-500 text-sm mb-4 md:mb-0">
+              © {new Date().getFullYear()} Paras Factore. All rights reserved.
+            </p>
+            <div className="flex gap-6">
+              <a href="#" className="text-gray-500 hover:text-white text-sm transition-colors duration-300">Privacy Policy</a>
+              <a href="#" className="text-gray-500 hover:text-white text-sm transition-colors duration-300">Terms of Service</a>
+              <a href="#" className="text-gray-500 hover:text-white text-sm transition-colors duration-300">Cookies</a>
             </div>
-
-            {/* Developers Column */}
-            <div className="w-full md:w-1/3 px-4 mb-8">
-              <h3 className="text-pink-500 text-lg font-semibold uppercase mb-5">Developers</h3>
-              <ul>
-                {['Documentation', 'Authentication', 'API Reference', 'Support', 'Open Source'].map((item) => (
-                  <li key={item} className="mb-3">
-                    <a 
-                      href="#" 
-                      className="text-gray-700 hover:text-pink-500 transition-colors duration-300"
-                    >
-                      {item}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          {/* Social Links */}
-          <div className="flex gap-4 mt-4 justify-center md:justify-start">
-            {[FaFacebookF, FaTwitter, FaLinkedinIn].map((Icon, index) => (
-              <a 
-                key={index}
-                href="#" 
-                className="w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
-              >
-                <Icon className="text-gray-500 text-lg" />
-              </a>
-            ))}
           </div>
         </div>
       </footer>
 
       {/* Scroll to top button */}
       <button
-        className={`fixed bottom-5 right-5 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-gray-100 hover:-translate-y-1 transition-all duration-300 ${
+        className={`fixed bottom-8 right-8 w-12 h-12 bg-gray-800 hover:bg-gray-700 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 ${
           showScrollTop ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
         onClick={scrollToTop}
+        aria-label="Scroll to top"
       >
-        <FaArrowUp className="text-gray-600" />
+        <FaArrowUp className="text-white" />
       </button>
     </>
   );
