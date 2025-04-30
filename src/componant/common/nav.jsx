@@ -89,7 +89,7 @@ const Navbar = () => {
           >
             <Link to="/contact">
               <motion.button
-                className="bg-gradient-to-r from-pink-500 to-red-500 text-white px-6 py-2 rounded-full font-medium shadow-md"
+                className="bg-gradient-to-r from-pink-500 to-red-500 text-white px-6 py-2 rounded-full font-medium shadow-md p-3"
                 whileHover={{ scale: 1.05, boxShadow: "0px 5px 15px rgba(255, 56, 92, 0.4)" }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -162,7 +162,7 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            <Link to="/contact">
+            {/* <Link to="/contact">
             <motion.button
               className="bg-gradient-to-r from-pink-500 to-red-500 text-white py-2 rounded-md font-medium shadow-md mt-2"
               whileHover={{ scale: 1.02 }}
@@ -170,7 +170,7 @@ const Navbar = () => {
             >
               Get Started
             </motion.button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </motion.div>

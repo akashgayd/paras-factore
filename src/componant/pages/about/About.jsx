@@ -14,8 +14,8 @@ const MainAbout = () => {
   
 
   return (
-    <div className=" text-[#333] leading-[1.6] sm:mt-12">
-      <div className="bg-white w-full ">
+    <div className=" text-[#333] leading-[1.6]">
+      <div className="bg-white w-full mt-12">
         <Navbar />
       </div>
       
@@ -213,7 +213,7 @@ const MainAbout = () => {
                 description: "Paras, an accomplished author, is also a passionate advocate for diversity and inclusion. As a brand ambassador, he collaborates on inclusive initiatives, CSR partnerships, and marketing campaigns, ensuring authentic LGBTQIA+ representation in corporate and social impact projects."
               },
               {
-                name: "Anchor",
+                name: "Host",
                 title: "Advocating for inclusivity and guiding individuals & organizations.",
                 image: three,
                 description: "Paras is a versatile host, bringing energy and inclusivity to corporate events, award functions, and conferences. He excels in LGBTQIA+ Pride events, product launches, brand campaigns, and private gatherings, ensuring engaging and memorable experiences for every audience."
