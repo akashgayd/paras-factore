@@ -7,7 +7,7 @@ import imagefist from "../../../assets/new3.JPG";
 import imagesecond from "../../../assets/aboutimg2.jpeg";
 import three from "../../../assets/aboutImg3.jpeg";
 import Footer from "../../common/footer";
-
+// impoting images for the background and other sections
 const MainAbout = () => {
   // Mock imports for images (replace with your actual imports)
   
