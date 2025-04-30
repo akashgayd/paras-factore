@@ -3,7 +3,7 @@ import React from "react";
 import { Book, Lightbulb, Globe, HandHelping} from 'lucide-react';
 import Navbar from "../../common/nav";
 import { Link } from "react-router-dom";
-import imagefist from "../../../assets/new3.jpg";
+import imagefist from "../../../assets/new3.JPG";
 import imagesecond from "../../../assets/aboutimg2.jpeg";
 import three from "../../../assets/aboutImg3.jpeg";
 import Footer from "../../common/footer";
