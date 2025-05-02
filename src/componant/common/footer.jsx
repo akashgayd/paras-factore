@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaArrowUp, FaInstagram ,FaYoutube} from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaArrowUp, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import ComLogo from '../../assets/nav_logo.jpeg';
 
 const Footer = () => {
@@ -21,20 +22,27 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: FaFacebookF,
-      url: 'https://www.facebook.com/profile.php?id=61574183728935', // Replace with your Facebook profile
+      url: 'https://www.facebook.com/profile.php?id=61574183728935',
     },
     {
       icon: FaYoutube,
-      url: 'https://www.youtube.com/@ThePaarasFactor', // Replace with your Twitter profile
+      url: 'https://www.youtube.com/@ThePaarasFactor',
     },
     {
       icon: FaLinkedinIn,
-      url: 'https://www.linkedin.com/in/paras-g-vats-a4216233b/', // Replace with your LinkedIn profile
+      url: 'https://www.linkedin.com/in/paras-g-vats-a4216233b/',
     },
     {
       icon: FaInstagram,
-      url: 'https://www.instagram.com/thepaarasfactor/', // Replace with your Instagram profile
+      url: 'https://www.instagram.com/thepaarasfactor/',
     },
+  ];
+
+  const internalLinks = [
+    { label: 'About', to: '/about' },
+    { label: 'Portfolio', to: '/' },
+    { label: 'Services', to: '/services' },
+    { label: 'Contact', to: '/contact' },
   ];
 
   return (
@@ -47,9 +55,9 @@ const Footer = () => {
             <div className="flex flex-col items-start mb-8 md:mb-0 w-full md:w-auto">
               <div className="flex items-center mb-4">
                 <div className="w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-white">
-                  <img 
-                    src={ComLogo} 
-                    alt="Company Logo" 
+                  <img
+                    src={ComLogo}
+                    alt="Company Logo"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -60,7 +68,7 @@ const Footer = () => {
               </p>
               <div className="flex gap-4">
                 {socialLinks.map(({ icon: Icon, url }, index) => (
-                  <a 
+                  <a
                     key={index}
                     href={url}
                     target="_blank"
@@ -79,14 +87,14 @@ const Footer = () => {
               <div>
                 <h3 className="text-white text-lg font-semibold mb-5 uppercase tracking-wider">Quick Links</h3>
                 <ul className="space-y-3">
-                  {['About', 'Portfolio', 'Services', 'Blog', 'Contact'].map((item) => (
-                    <li key={item}>
-                      <a 
-                        href="#" 
+                  {internalLinks.map(({ label, to }) => (
+                    <li key={to}>
+                      <Link
+                        to={to}
                         className="text-gray-400 hover:text-white transition-colors duration-300"
                       >
-                        {item}
-                      </a>
+                        {label}
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -96,10 +104,10 @@ const Footer = () => {
               <div>
                 <h3 className="text-white text-lg font-semibold mb-5 uppercase tracking-wider">Resources</h3>
                 <ul className="space-y-3">
-                  {['Help Center', 'System Status', 'Terms', 'Pricing', 'Over Right'].map((item) => (
-                    <li key={item}>
-                      <a 
-                        href="#" 
+                  {['Help Center', 'System Status', 'Terms', 'Pricing', 'Over Right'].map((item, i) => (
+                    <li key={i}>
+                      <a
+                        href="#"
                         className="text-gray-400 hover:text-white transition-colors duration-300"
                       >
                         {item}
@@ -113,10 +121,10 @@ const Footer = () => {
               <div>
                 <h3 className="text-white text-lg font-semibold mb-5 uppercase tracking-wider">Company</h3>
                 <ul className="space-y-3">
-                  {['Careers', 'Privacy', 'Cookies', 'Press', 'FAQ'].map((item) => (
-                    <li key={item}>
-                      <a 
-                        href="#" 
+                  {['Careers', 'Privacy', 'Cookies', 'Press', 'FAQ'].map((item, i) => (
+                    <li key={i}>
+                      <a
+                        href="#"
                         className="text-gray-400 hover:text-white transition-colors duration-300"
                       >
                         {item}
@@ -144,9 +152,7 @@ const Footer = () => {
 
       {/* Scroll to top button */}
       <button
-        className={`fixed bottom-8 right-8 w-12 h-12 bg-gray-800 hover:bg-gray-700 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 ${
-          showScrollTop ? 'opacity-100 visible' : 'opacity-0 invisible'
-        }`}
+        className={`fixed bottom-8 right-8 w-12 h-12 bg-gray-800 hover:bg-gray-700 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 ${showScrollTop ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
         onClick={scrollToTop}
         aria-label="Scroll to top"
       >

@@ -3,10 +3,10 @@ import React from "react";
 import { Book, Lightbulb, Globe, HandHelping} from 'lucide-react';
 import Navbar from "../../common/nav";
 import { Link } from "react-router-dom";
-import imagefist from "../../../assets/new3.JPG";
+import imagefist from "../../../assets/paras1.jpeg";
 import imagesecond from "../../../assets/aboutimg2.jpeg";
 import three from "../../../assets/aboutimg3.jpeg";
-import four from "../../../assets/new2.JPG";
+import four from "../../../assets/paras2.jpeg";
 import five from "../../../assets/new3.JPG";
 import Footer from "../../common/footer";
 // impoting images for the background and other sections
@@ -84,17 +84,20 @@ const MainAbout = () => {
             </div>
             
             <div className="order-1 md:order-2">
-  <div 
-    className="rounded-xl overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105"
-    style={{
-      backgroundImage: `url(${imagefist})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-   
-      aspectRatio: "16/13", // Adjust this to match your image's aspect ratio
-      width: '100%'
-    }}
-  ></div>
+            <div
+  className="overflow-hidden shadow-lg rounded-lg transform transition-all duration-500 hover:scale-105"
+  style={{
+    backgroundImage: `url(${imagefist})`,
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    aspectRatio: '1/1', // Use '1/1' for a square, or adjust as needed
+    width: '100%',
+    borderRadius: '1rem',
+    backgroundColor: '#fff' // Optional: helps with transparent images
+  }}
+></div>
+
 </div>
           </div>
         </div>
