@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaArrowUp, FaInstagram } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaArrowUp, FaInstagram ,FaYoutube} from 'react-icons/fa';
 import ComLogo from '../../assets/nav_logo.jpeg';
 
 const Footer = () => {
@@ -17,6 +17,25 @@ const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  const socialLinks = [
+    {
+      icon: FaFacebookF,
+      url: 'https://www.facebook.com/profile.php?id=61574183728935', // Replace with your Facebook profile
+    },
+    {
+      icon: FaYoutube,
+      url: 'https://www.youtube.com/@ThePaarasFactor', // Replace with your Twitter profile
+    },
+    {
+      icon: FaLinkedinIn,
+      url: 'https://www.linkedin.com/in/paras-g-vats-a4216233b/', // Replace with your LinkedIn profile
+    },
+    {
+      icon: FaInstagram,
+      url: 'https://www.instagram.com/thepaarasfactor/', // Replace with your Instagram profile
+    },
+  ];
 
   return (
     <>
@@ -40,10 +59,12 @@ const Footer = () => {
                 Transforming ideas into digital reality with innovative solutions.
               </p>
               <div className="flex gap-4">
-                {[FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram].map((Icon, index) => (
+                {socialLinks.map(({ icon: Icon, url }, index) => (
                   <a 
                     key={index}
-                    href="#" 
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-full flex items-center justify-center transition-colors duration-300 group"
                   >
                     <Icon className="text-gray-300 group-hover:text-white text-lg" />

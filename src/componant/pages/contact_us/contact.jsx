@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ChevronDown, Send, Phone, Mail, CheckCircle, Loader, Facebook, Twitter, Instagram } from "lucide-react";
+import { ChevronDown, Send, Phone, Mail, CheckCircle, Loader, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 import Navbar from "../../common/nav";
 import Footer from "../../common/footer";
 const ContactForm = () => {
@@ -277,13 +277,13 @@ window.open(gmailLink, "_blank");
             <div className="flex flex-col sm:flex-row justify-between items-center">
               <p className="text-gray-600 mb-4 sm:mb-0">We typically respond within 24 hours</p>
               <div className="flex space-x-4">
-                <a href="#" className="text-gray-500 hover:text-gray-800 transition-colors">
+                <a href="https://www.facebook.com/profile.php?id=61574183728935" className="text-gray-500 hover:text-gray-800 transition-colors">
                   <Facebook className="h-5 w-5" />
                 </a>
-                <a href="#" className="text-gray-500 hover:text-gray-800 transition-colors">
-                  <Twitter className="h-5 w-5" />
+                <a href="https://www.youtube.com/@ThePaarasFactor" className="text-gray-500 hover:text-gray-800 transition-colors">
+                  <Youtube className="h-5 w-5" />
                 </a>
-                <a href="#" className="text-gray-500 hover:text-gray-800 transition-colors">
+                <a href="https://www.instagram.com/thepaarasfactor/" className="text-gray-500 hover:text-gray-800 transition-colors">
                   <Instagram className="h-5 w-5" />
                 </a>
               </div>
