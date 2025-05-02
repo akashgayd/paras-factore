@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import imagefist from "../../../assets/new3.JPG";
 import imagesecond from "../../../assets/aboutimg2.jpeg";
 import three from "../../../assets/aboutimg3.jpeg";
+import four from "../../../assets/new2.JPG";
+import five from "../../../assets/new3.JPG";
 import Footer from "../../common/footer";
 // impoting images for the background and other sections
 // import imagefist from "../../../assets/new3.JPG";
@@ -209,13 +211,13 @@ const MainAbout = () => {
               {
                 name: "Author",
                 title: "Writing impactful content on social change and empowerment.",
-                image: three,
+                image: five,
                 description: "Paras, an accomplished author, is also a passionate advocate for diversity and inclusion. As a brand ambassador, he collaborates on inclusive initiatives, CSR partnerships, and marketing campaigns, ensuring authentic LGBTQIA+ representation in corporate and social impact projects."
               },
               {
                 name: "Host",
                 title: "Advocating for inclusivity and guiding individuals & organizations.",
-                image: three,
+                image: four,
                 description: "Paras is a versatile host, bringing energy and inclusivity to corporate events, award functions, and conferences. He excels in LGBTQIA+ Pride events, product launches, brand campaigns, and private gatherings, ensuring engaging and memorable experiences for every audience."
               }
             ].map(({ name, title, image, description }, index) => (
