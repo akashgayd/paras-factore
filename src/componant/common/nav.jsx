@@ -50,7 +50,7 @@ const Navbar = () => {
               <img  src={LogoImg}className="w-full h-full rounded-full"/>
             </motion.div>
             <span className="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-purple-500">
-              PAARAS
+           The Paaras Factor
             </span>
           </Link>
 

@@ -8,7 +8,7 @@ const TestimonialSlider = () => {
   
   const testimonials = [
     {
-      name: "Alex",
+      name: "Ashish",
       position: "CTO",
       company: "Solutions",
       period: "Direct Contract - Jan 2023 - Present",

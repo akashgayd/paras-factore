@@ -51,7 +51,7 @@ const MainAbout = () => {
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
           <h1 className="text-4xl sm:text-5xl md:text-6xl mb-4 font-bold leading-tight animate-fadeIn">
-            The Paras Factor
+            The Paaras Factor
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl opacity-90 font-light">
             Anchor | Author | LGBTQIA+ Coach 🏳️‍🌈
