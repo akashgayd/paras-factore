@@ -5,6 +5,9 @@ import ContactForm from "./componant/pages/contact_us/contact";
 import MainAbout from "./componant/pages/about/About";
 import Services from "./componant/pages/servieces/servies";
 import ScrollToTop from "./ScrollToTop"; // 👈 import the new component
+import TestimonialSlider from "./componant/Home/feedback/feedback";
+
+
 
 const App = () => {
   return (
@@ -15,6 +18,7 @@ const App = () => {
         <Route path="/about" element={<MainAbout />} />
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
+        
       </Routes>
     </>
   );

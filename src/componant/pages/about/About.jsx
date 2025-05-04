@@ -6,14 +6,18 @@ import { Link } from "react-router-dom";
 import imagefist from "../../../assets/paras1.jpeg";
 import imagesecond from "../../../assets/new4.JPG";
 import three from "../../../assets/aboutimg3.jpeg";
-import four from "../../../assets/paras2.jpeg";
+import four from "../../../assets/homeLogo.JPG";
 import five from "../../../assets/new3.JPG";
 import Footer from "../../common/footer";
+
+
 // impoting images for the background and other sections
 // import imagefist from "../../../assets/new3.JPG";
 const MainAbout = () => {
   // Mock imports for images (replace with your actual imports)
-  
+
+
+
 
   return (
     <div className=" text-[#333] leading-[1.6]">
@@ -259,12 +263,16 @@ const MainAbout = () => {
             <br /><br />
             Paras is an author and trailblazer, has transformed his journey into a powerful force for diversity and inclusion. Rising above societal barriers, he became a voice for the LGBTQIA+ community, advocating for authentic representation in corporate spaces and media. As a brand ambassador, he collaborates on inclusive initiatives, CSR partnerships, and marketing campaigns, ensuring meaningful impact and lasting change.
           </p>
-          <a
-            href="/services" 
-            className="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 text-lg font-medium rounded-full hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
-            Explore My History
-          </a>
+
+          {
+            
+          }
+  <Link
+  to="/#testimonial"
+  className="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 text-lg font-medium rounded-full hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl"
+>
+  Explore My History
+</Link>
         </div>
       </section>
 

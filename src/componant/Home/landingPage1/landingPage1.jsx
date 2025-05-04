@@ -8,6 +8,7 @@ import WhatIDo from "../../Home/what_i_do/what_i_do";
 import TestimonialSlider from "../feedback/feedback";
 import Footer from '../../common/footer';
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const EnhancedLanding = () => {
   // Professional color palette
@@ -95,6 +96,23 @@ const EnhancedLanding = () => {
     },
     tap: { scale: 0.98 }
   };
+
+
+  const location = useLocation();
+
+useEffect(() => {
+  if (location.hash) {
+    const id = location.hash.replace("#", "");
+    const element = document.getElementById(id);
+    if (element) {
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: "smooth" });
+      }, 100); // slight delay ensures the DOM is ready
+    }
+  }
+}, [location]);
+
+
 
   return (
     <div className="min-h-screen bg-white">
@@ -208,11 +226,14 @@ const EnhancedLanding = () => {
       </div>
       
       {/* Other Sections */}
-    
+   
       <WhatIDo/>
       <MyConstomer/>
-      <TestimonialSlider/>
+      <div id="testimonial">
+  <TestimonialSlider />
+</div>
       <Footer/>
+     
     </div>
   );
 };
