@@ -26,7 +26,7 @@ const WhatIDo = () => {
     {
       id: 3,
       icon: <FaUserTie className="text-4xl" />,
-      title: 'Professional Emceeing',
+      title: 'Professional Emcee',
       description: 'Dynamic hosting for corporate events, conferences, and diversity summits.',
       gradientStart: '#f2f5fa'
      

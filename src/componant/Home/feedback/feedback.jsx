@@ -46,7 +46,48 @@ const TestimonialSlider = () => {
       rating: 5,
       image: Client1,
       service: "Intersectional Mentorship Platform"
+    },
+    {
+      name: "Riya Kapoor",
+      position: "Community Engagement Lead",
+      company: "QueerConnect India",
+      period: "Direct Contract - Apr 2023 - Present",
+      content: "The Paaras Factor helped us build a digital platform for queer youth across India. Features like gender-neutral onboarding, safe reporting tools, and moderated chat rooms created a space our members trust and love.",
+      rating: 5,
+      image: Client1,
+      service: "LGBTQIA+ Youth Support Platform"
+    },
+    {
+      name: "Aman Sheikh",
+      position: "Digital Strategy Consultant",
+      company: "Pridexyz",
+      period: "Freelance - Sep 2022 - Mar 2023",
+      content: "We collaborated with The Paaras Factor on a queer-inclusive job portal. Their team implemented pronoun visibility, bias-free job filtering, and employer DEI scores. It's a revolution in queer-friendly hiring.",
+      rating: 5,
+      image: Client1,
+      service: "Queer-Friendly Job Portal"
+    },
+    {
+      name: "Sneha Nair",
+      position: "Program Coordinator",
+      company: "xyz Foundation",
+      period: "Direct Contract - Jan 2023 - Aug 2023",
+      content: "We needed a secure platform for LGBTQIA+ mental health sessions. They integrated anonymous login, encrypted video calls, and therapist profiles with inclusivity badges. Our clients feel truly seen and safe.",
+      rating: 5,
+      image: Client1,
+      service: "Secure LGBTQIA+ Mental Health Platform"
+    },
+    {
+      name: "Rahul Bhagat",
+      position: "Founder",
+      company: "xyz NGO",
+      period: "Retainer - Jul 2023 - Present",
+      content: "From inclusive UX copy to trans-specific onboarding flows, The Paaras Factor handled everything with empathy and technical excellence. Our platform now serves thousands from the transgender community with pride and dignity.",
+      rating: 5,
+      image: Client1,
+      service: "Transgender Community Empowerment Portal"
     }
+    
   ];
 
   // Auto slide functionality

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import homeImg from '../../../assets/homeLogo.JPG';
+import homeImg from '../../../assets/aboutimg2.jpeg';
 import Navbar from "../../common/nav";
 import MyConstomer from "../constS/consomersat";
 import WhatIDo from "../../Home/what_i_do/what_i_do";
@@ -190,9 +190,9 @@ const EnhancedLanding = () => {
               <img
                 src={homeImg}
                 alt="Professional Portrait"
-                className="w-full h-auto max-w-md object-cover rounded-2xl"
+                className="w-full h-auto max-w-md object-cover rounded-1xl"
                 style={{ 
-                  border: `8px solid white`,
+                 
                   boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)'
                 }}
               />
@@ -208,9 +208,9 @@ const EnhancedLanding = () => {
       </div>
       
       {/* Other Sections */}
-      <MyConstomer/>
+    
       <WhatIDo/>
-  
+      <MyConstomer/>
       <TestimonialSlider/>
       <Footer/>
     </div>

@@ -4,7 +4,7 @@ import { Book, Lightbulb, Globe, HandHelping} from 'lucide-react';
 import Navbar from "../../common/nav";
 import { Link } from "react-router-dom";
 import imagefist from "../../../assets/paras1.jpeg";
-import imagesecond from "../../../assets/aboutimg2.jpeg";
+import imagesecond from "../../../assets/new4.JPG";
 import three from "../../../assets/aboutimg3.jpeg";
 import four from "../../../assets/paras2.jpeg";
 import five from "../../../assets/new3.JPG";
@@ -137,13 +137,20 @@ const MainAbout = () => {
             </div>
             
             <div className="order-1 md:order-1">
-              <div 
-                className="h-64 sm:h-80 md:h-96 rounded-xl overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105 bg-cover bg-center"
-                style={{
-                  backgroundImage: `url(${imagesecond})`,
-                  boxShadow: "0 15px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
-                }}
-              ></div>
+            <div 
+  className="w-full md:w-[90%] h-80 md:h-96 rounded-xl overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105 bg-no-repeat bg-center mx-auto"
+  style={{
+    backgroundImage: `url(${imagesecond})`,
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
+    boxShadow: "0 15px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+  }}
+>
+
+
+
+</div>
+
             </div>
           </div>
         </div>

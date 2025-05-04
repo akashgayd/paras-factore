@@ -9,7 +9,7 @@ import ScrollToTop from "./ScrollToTop"; // 👈 import the new component
 const App = () => {
   return (
     <>
-      <ScrollToTop /> {/* 👈 Add this */}
+      <ScrollToTop /> 
       <Routes>
         <Route path="/contact" element={<ContactForm />} />
         <Route path="/about" element={<MainAbout />} />
