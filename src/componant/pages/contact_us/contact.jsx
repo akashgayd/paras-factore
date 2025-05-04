@@ -88,7 +88,7 @@ window.open(gmailLink, "_blank");
   return (
     <>
     <Navbar />
-    <div className="min-h-screen mt-4 bg-gradient-to-b from-gray-50 to-white flex items-center justify-center w-full py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen mt-6 bg-gradient-to-b from-gray-50 to-white flex items-center justify-center w-full py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl w-full bg-white rounded-2xl shadow-xl overflow-hidden relative">
         {/* Top decorative bar */}
         <div className="h-2 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500"></div>

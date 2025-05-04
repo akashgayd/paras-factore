@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import LogoImg from '../../assets/nav_logo.jpeg'
+import LogoImg from '../../assets/nav_logo.jpeg';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -13,9 +13,7 @@ const Navbar = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    // Set active page based on current path
     setActivePage(window.location.pathname);
-    
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -24,14 +22,12 @@ const Navbar = () => {
     { to: '/', label: 'Home' },
     { to: '/about', label: 'About' },
     { to: '/services', label: 'Services' },
-   
-    
     { to: '/contact', label: 'Contact' }
   ];
 
   return (
-    <motion.nav 
-      className={`fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 ${
+    <motion.nav
+      className={`fixed top-0  bg-white left-0 w-full z-50 transition-all duration-300 ${
         isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'
       }`}
       initial={{ y: -100 }}
@@ -47,23 +43,21 @@ const Navbar = () => {
               whileHover={{ scale: 1.1, rotate: 5 }}
               whileTap={{ scale: 0.95 }}
             >
-              <img  src={LogoImg}className="w-full h-full rounded-full"/>
+              <img src={LogoImg} className="w-full h-full rounded-full" alt="Logo" />
             </motion.div>
-            <span className="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-purple-500">
-           The Paaras Factor
+            <span className="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-purple-500 sm:text-1xl">
+              The Paaras Factor
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
                 className={`relative font-medium transition-colors duration-200 ${
-                  activePage === link.to
-                    ? 'text-pink-500'
-                    : 'text-gray-700 hover:text-pink-500'
+                  activePage === link.to ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'
                 }`}
               >
                 {link.label}
@@ -80,7 +74,7 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
+          {/* Desktop CTA */}
           <motion.div
             className="hidden md:block"
             initial={{ opacity: 0 }}
@@ -89,8 +83,8 @@ const Navbar = () => {
           >
             <Link to="/contact">
               <motion.button
-                className="bg-gradient-to-r from-pink-500 to-red-500 text-white px-6 py-2 rounded-full font-medium shadow-md p-3"
-                whileHover={{ scale: 1.05, boxShadow: "0px 5px 15px rgba(255, 56, 92, 0.4)" }}
+                className="bg-gradient-to-r from-pink-500 to-red-500 text-white px-6 py-2 rounded-full font-medium shadow-md"
+                whileHover={{ scale: 1.05, boxShadow: '0px 5px 15px rgba(255, 56, 92, 0.4)' }}
                 whileTap={{ scale: 0.95 }}
               >
                 Get Started
@@ -98,36 +92,37 @@ const Navbar = () => {
             </Link>
           </motion.div>
 
-          {/* Mobile CTA Button */}
-          <motion.div
-            className="md:hidden"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-          >
-            <Link to="/contact">
-            <motion.button
-              className="bg-gradient-to-r from-pink-500 to-red-500 text-white px-6 py-2 rounded-full font-medium shadow-md"
-              whileHover={{ scale: 1.05, boxShadow: "0px 5px 15px rgba(255, 56, 92, 0.4)" }}
-              whileTap={{ scale: 0.95 }}
+          {/* Mobile Buttons */}
+          <div className="flex md:hidden items-center gap-2">
+            {/* CTA for Mobile */}
+            <motion.div
+              className="flex-shrink-0"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
             >
-              Get Started
-            </motion.button>
-            </Link>
-          </motion.div>
+              <Link to="/contact">
+                <motion.button
+                  className="bg-gradient-to-r from-pink-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-md"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Get Started
+                </motion.button>
+              </Link>
+            </motion.div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
+            {/* Menu Toggle */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-gray-700 focus:outline-none"
             >
               {isMobileMenuOpen ? (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               ) : (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
               )}
@@ -138,9 +133,11 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <motion.div
-        className={`md:hidden bg-white shadow-lg absolute w-full left-0 py-4 ${isMobileMenuOpen ? 'block' : 'hidden'}`}
+        className={`md:hidden bg-white shadow-lg absolute w-full left-0 py-4 transition-all duration-300 ${
+          isMobileMenuOpen ? 'block' : 'hidden'
+        }`}
         initial={{ opacity: 0, height: 0 }}
-        animate={{ 
+        animate={{
           opacity: isMobileMenuOpen ? 1 : 0,
           height: isMobileMenuOpen ? 'auto' : 0
         }}
@@ -162,15 +159,6 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            {/* <Link to="/contact">
-            <motion.button
-              className="bg-gradient-to-r from-pink-500 to-red-500 text-white py-2 rounded-md font-medium shadow-md mt-2"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Get Started
-            </motion.button>
-            </Link> */}
           </div>
         </div>
       </motion.div>
