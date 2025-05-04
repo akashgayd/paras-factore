@@ -61,7 +61,7 @@ const Footer = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="text-2xl text-white font-bold">Paras Factor</div>
+                <div className="text-2xl text-white font-bold">The Paaras Factor</div>
               </div>
               <p className="text-gray-400 max-w-xs mb-4">
                 Transforming ideas into digital reality with innovative solutions.
