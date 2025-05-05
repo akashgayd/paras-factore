@@ -20,7 +20,7 @@ const TestimonialSlider = () => {
     {
       name: "Sarah",
       position: "Director of HR",
-      company: "Innovation Corp Xyz",
+      company: "Innovation Corp",
       period: "Direct Contract - Mar 2023 - Ongoing",
       content: "Our corporate training portal needed a complete overhaul to be more inclusive. The team delivered a beautifully designed, fully accessible platform that supports multiple languages and cultural contexts. Their attention to detail in representing diverse communities is remarkable.",
       rating: 5,
@@ -40,7 +40,7 @@ const TestimonialSlider = () => {
     {
       name: "Tushar",
       position: "Analyst",
-      company: "Tech Solutions xyz",
+      company: "Tech Solutions",
       period: "Direct Contract - Nov 2022 - Present",
       content: "The mentorship matching application they developed has increased engagement by 300% among our members. The algorithm they designed considers intersectional factors that make matches significantly more meaningful than other platforms we've tried.",
       rating: 5,
@@ -60,7 +60,7 @@ const TestimonialSlider = () => {
     {
       name: "Aman Sheikh",
       position: "Digital Strategy Consultant",
-      company: "Pridexyz",
+      company: "Pridexxx",
       period: "Freelance - Sep 2022 - Mar 2023",
       content: "We collaborated with The Paaras Factor on a queer-inclusive job portal. Their team implemented pronoun visibility, bias-free job filtering, and employer DEI scores. It's a revolution in queer-friendly hiring.",
       rating: 5,
@@ -70,7 +70,7 @@ const TestimonialSlider = () => {
     {
       name: "Sneha Nair",
       position: "Program Coordinator",
-      company: "xyz Foundation",
+      company: "Foundation",
       period: "Direct Contract - Jan 2023 - Aug 2023",
       content: "We needed a secure platform for LGBTQIA+ mental health sessions. They integrated anonymous login, encrypted video calls, and therapist profiles with inclusivity badges. Our clients feel truly seen and safe.",
       rating: 5,
@@ -80,7 +80,7 @@ const TestimonialSlider = () => {
     {
       name: "Rahul Bhagat",
       position: "Founder",
-      company: "xyz NGO",
+      company: "NGO",
       period: "Retainer - Jul 2023 - Present",
       content: "From inclusive UX copy to trans-specific onboarding flows, The Paaras Factor handled everything with empathy and technical excellence. Our platform now serves thousands from the transgender community with pride and dignity.",
       rating: 5,
